@@ -4,4 +4,4 @@
   - name: install telnet rpm using yum
      yum:
        name: telnet
-       state: present
+       state: latest
