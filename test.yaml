@@ -1,0 +1,7 @@
+---
+ - hosts: localhost
+   name: install telnet rpm using yum
+   tasks:
+     yum:
+      - name: telnet
+        state: present
