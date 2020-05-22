@@ -1,0 +1,18 @@
+tasks:
+  - name: create a cache directory
+    file:
+      path: /opt/cache
+      state: present
+  
+  - name: install nginx
+    yum:
+      name: nginx
+      state: latest
+  
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted
+      
+      
+  
