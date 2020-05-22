@@ -8,7 +8,7 @@
     notify: restart httpd
     
   handlers:
-    - name: restarted httpd
+    - name: restart httpd
       service:
         name: httpd
         state: restarted
