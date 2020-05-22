@@ -15,7 +15,8 @@
   - name: test to see if Selinux is running 
     command: getenforce
     register: sestatus
-    change_when: false
+    changed_when: false
+    
   - name: install apache httpd
     yum: name=httpd state=present
         
