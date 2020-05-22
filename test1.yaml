@@ -6,13 +6,13 @@
       path: /opt/cache
       state: directory
   
-  - name: install nginx
+  - name: install xclock
     yum:
-      name: nginx
+      name: xclock
       state: latest
   
-  - name: restart nginx
+  - name: remove xclock
     service:
-      name: nginx
-      state: restarted
+      name: xclock
+      state: absent
       
