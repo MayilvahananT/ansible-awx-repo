@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+  - name: install http package
+    yum:
+      name: httpd
+      state: latest
+    notify: restart httpd
+    
+  handlers:
+    - name: restart httpd
+      service:
+        name: httpd
+        state: restarted
